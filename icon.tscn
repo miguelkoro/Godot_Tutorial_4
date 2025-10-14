@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://dauwqlmm7cj2q"]
+
+[ext_resource type="Shader" uid="uid://b83pvyg0g5kf" path="res://myShader.gdshader" id="1_hqyvl"]
+[ext_resource type="Texture2D" uid="uid://du4guok5cm4mu" path="res://icon.svg" id="2_otv2m"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ki3iq"]
+shader = ExtResource("1_hqyvl")
+shader_parameter/tint_color = Color(0.34901962, 0.5176471, 1, 1)
+shader_parameter/amplitude = 0.05
+shader_parameter/frequency = 20.0
+shader_parameter/speed = 2.0
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_62ljx"]
+diffuse_texture = ExtResource("2_otv2m")
+
+[node name="Icon" type="Sprite2D"]
+material = SubResource("ShaderMaterial_ki3iq")
+position = Vector2(-3, -20)
+texture = SubResource("CanvasTexture_62ljx")
